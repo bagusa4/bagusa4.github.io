@@ -14,7 +14,7 @@
 	<!-- End WOWSlider.com HEAD section -->
 	
 	<title> Bagusa4 GitHub Site </title>
-	<meta name="description" content="">
+	<meta name="description" content=" Bagusa4 GitHub Site :) Developer">
     <meta name="author" content="Bagusa4">
 	<style>
 		header {
@@ -29,6 +29,10 @@
  
 			-webkit-transition-property: -webkit-transform;
 			transition-property: transform;
+		}
+		
+		.top-toph {
+			padding: 0 10px;
 		}
  
 		.top-bar--hidden {
@@ -45,15 +49,21 @@
 		footer h1 {
 			color: white!important;
 		}
+		.hider {
+			display: none;
+		}
 	</style>
 </head>
 <body role="document">
 	<div class="fixed">
-	<nav class="top-bar" data-topbar role="navigation">
-		<ul class="title-area">
+	<nav class="top-bar top-toph" data-topbar role="navigation">
+		<ul class="title-area left">
 			<li class="name">
-				<h1><a href="/"><img src="frame/logo.png" width="38" height="38"></img>Bagusa4 GitHub Site</a></li>
+				<h1 title="Bagusa4 GitHub Site"><a href="http://bagusa4.github.io/"><img src="frame/logo.png" width="38" height="38"></img>Bagusa4 GitHub Site</a></li>
 			</li>
+		</ul>
+		<ul class="title-area right">
+			<button class="button aboutme" title="Who Bagusa4 ???"><i class="fa fa-smile-o"></i> About Me <i class="fa fa-smile-o"></i></button>
 		</ul>
 	</nav>
 	</div>
@@ -96,13 +106,16 @@
 	<section class="row">
 	<article>
 	<div class="large-8 medium-8 columns">
-	<h1> My GitHub Activity </h1>
+	<h1 title="Bagusa4 GitHub Activity"><i class="fa fa-rss"></i> Bagusa4 GitHub Activity <i class="fa fa-rss"></i></h1>
 	<div id="mygitactivivtyfeed"></div>
 	</div>
 	</article>
 	<aside>
 	<div class="large-4 medium-4 columns">
-	<h1> Aside </h1>
+	<h1 title="My Favorite Music"><i class="fa fa-music"></i> My Favorite Music <i class="fa fa-music"></i></h1>
+	<div id="mydeezerlovedtrack">
+	<iframe scrolling="no" frameborder="0" allowTransparency="true" src="http://www.deezer.com/plugins/player?autoplay=false&playlist=true&width=300&height=1000&cover=true&type=playlist&id=508764102&title=&format=vertical&app_id=undefined" width="300" height="1000"></iframe>
+	</div>
 	<div>
 	</aside>
 	</section>
@@ -111,11 +124,17 @@
 		<div class="contain-to-grid">
 		<nav class="top-bar" data-topbar role="navigation">
 			<ul class="title-area">
-				<li class="name"><h1>Copyright by Bagusa4 Making With <i class="fa fa-heart"></i></h1></li>
+				<li class="name"><h1 title="Copyright by Bagusa4 Making With Heart and Hosted by GitHub">Copyright by Bagusa4 Making With <i class="fa fa-heart"></i> and Hosted by <i class="fa fa-github-square"></i></h1></li>
 			</ul>
 		</nav>
 		</div>
 	</footer>
+<div id="aboutme" class="hider" title="About">
+	<p><i class="fa fa-smile-o"></i> About Me ??? <i class="fa fa-smile-o"></i></p>
+	<p>Maybe I'm just a teenager, but i am really interested with technology, program,, ahh all about Computer <i class="fa fa-smile-o"></i><i class="fa fa-smile-o"></i><i class="fa fa-smile-o"></i></p>
+	<p>So if you want contact me you can visit <a href="https://www.facebook.com/bagusa4" target="_blank"><i class="fa fa-facebook-square"></i> My Facebook <i class="fa fa-facebook-square"></i></a> | <a href="https://twitter.com/Bagusa4" target="_blank"> <i class="fa fa-twitter-square"></i> My Tweeter <i class="fa fa-twitter-square"></i></a> | <a href="https://plus.google.com/+BagusAhmadSetiawan/" target="_blank"><i class="fa fa-google-plus-square"></i> My Google+ <i class="fa fa-google-plus-square"></i></a> <i class="fa fa-smile-o"><i class="fa fa-smile-o"><i class="fa fa-smile-o"><i class="fa fa-smile-o"><i class="fa fa-smile-o"><i class="fa fa-smile-o"><i class="fa fa-smile-o"><i class="fa fa-smile-o"><i class="fa fa-smile-o"><i class="fa fa-smile-o"></p>
+	<p>Thanks!!! :)</p>
+</div>
 <script type="text/javascript" src="frame/jquery/jquery.js"></script>
 <script type="text/javascript" src="frame/jquery/uijquery-ui.min.js"></script>
 <script type="text/javascript" src="frame/FeedEk/js/FeedEk.js"></script>
@@ -132,6 +151,14 @@ $('.top-bar').autohidesticky({ // Selector e.g ".header" must be Class not Id
 		autohidestickyNarrowOffset: 50*2, // The offset e.g 50/100/50*2=100
 		autohidestickyType: "active" // The type "active" or "lazy"
 });
+$('#mygitactivivtyfeed').FeedEk({
+FeedUrl:'https://github.com/Bagusa4.atom',
+MaxCount : 20,
+ShowDesc : true,
+ShowPubDate:true,
+DescCharacterLimit:100,
+TitleLinkTarget:'_blank',
+});
 $(document).foundation({
   tooltip: {
     selector : '.has-tip',
@@ -146,14 +173,27 @@ $(document).foundation({
     }
   }
 });
-$('#mygitactivivtyfeed').FeedEk({
-FeedUrl:'https://github.com/Bagusa4.atom',
-MaxCount : 20,
-ShowDesc : true,
-ShowPubDate:true,
-DescCharacterLimit:100,
-TitleLinkTarget:'_blank',
+$(".aboutme").click(function() {
+	$("#aboutme").dialog("open");
 });
+$( "#aboutme" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "drop",
+        duration: 1000
+      },
+      hide: {
+        effect: "clip",
+        duration: 1000
+      },
+	  buttons: {
+        Ok: function() {
+          $( this ).dialog( "close" );
+        }
+	  },
+	  width: "80%",
+	  top: '20px'
+    });
 });
 //]]>  
 </script>
