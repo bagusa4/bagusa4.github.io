@@ -1,7 +1,7 @@
 import { blogPlugin } from '@vuepress/plugin-blog'
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
-import { webpackBundler } from '@vuepress/bundler-webpack'
+import { viteBundler } from '@vuepress/bundler-vite'
 
 export default defineUserConfig({
   lang: 'en-US',
@@ -137,5 +137,5 @@ export default defineUserConfig({
     }),
   ],
 
-  bundler: webpackBundler(),
+  bundler: viteBundler(),
 })
