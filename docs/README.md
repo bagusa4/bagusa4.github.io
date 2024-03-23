@@ -3,31 +3,27 @@ home: true
 title: Home
 heroImage: images/logo.png
 actions:
-  - text: Get Started
-    link: /getting-started.html
+  - text: Introduction
+    link: /pages/about.html
     type: primary
 
-  - text: Introduction
-    link: https://vuejs.press/guide/introduction.html
+  - text: Get Started
+    link: /getting-started.html
     type: secondary
 
 features:
-  - title: Simplicity First
-    details: Minimal setup with markdown-centered project structure helps you focus on writing.
-  - title: Vue-Powered
-    details: Enjoy the dev experience of Vue, use Vue components in markdown, and develop custom themes with Vue.
-  - title: Performant
-    details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
-  - title: Themes
-    details: Providing a default theme out of the box. You can also choose a community theme or create your own one.
-  - title: Plugins
-    details: Flexible plugin API, allowing plugins to provide lots of plug-and-play features for your site.
-  - title: Bundlers
-    details: Default bundler is Vite, while Webpack is also supported. Choose the one you like!
+  - title: Quran 94:5
+    details: “Verily, with hardship, there is relief.”
+  - title: Quran 65:3
+    details: “And whoever puts their trust in Allah, then He will suffice him.” 
+  - title: Prophet Muhammad (peace be upon him)
+    details: “Kindness is a mark of faith, and whoever is not kind has no faith.”
+  - title: Steve Jobs
+    details: "Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma — which is living with the results of other people's thinking."
+  - title: Nikola Tesla
+    details: "Let the future tell the truth, and evaluate each one according to his work and accomplishments. The present is theirs; the future, for which I have really worked, is mine."
+  - title: Albert Einstein
+    details: "Try not to become a man of success. Rather become a man of value."
 
-footer: MIT Licensed | Copyright © 2018-present VuePress Community
+footer: MIT Licensed | Copyright © 2024-present @bagusa4
 ---
-
-This is the content of home page. Check [Home Page Docs][default-theme-home] for more details.
-
-[default-theme-home]: https://vuejs.press/reference/default-theme/frontmatter.html#home-page

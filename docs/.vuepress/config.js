@@ -38,7 +38,7 @@ export default defineUserConfig({
       },
       {
         text: 'About',
-        link: 'pages/about'
+        link: 'pages/about.html'
       },
     ],
   }),
