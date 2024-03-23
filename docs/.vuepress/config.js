@@ -30,6 +30,10 @@ export default defineUserConfig({
         text: 'Timeline',
         link: '/timeline/',
       },
+      {
+        text: 'About',
+        link: 'pages/about'
+      },
     ],
   }),
 
